@@ -6,7 +6,7 @@
 /*   By: merdal <merdal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 14:42:34 by merdal            #+#    #+#             */
-/*   Updated: 2023/11/03 19:42:49 by merdal           ###   ########.fr       */
+/*   Updated: 2023/11/04 17:21:47 by merdal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,19 @@
 
 int	ft_count_words(char *s, char c)
 {
-	int	i;
 	int	word;
 
-	i = 0;
 	word = 0;
-	if (s[i] == c)
-		i++;
-	while (s[i] != '\0')
+	while (*s)
 	{
-		if (s[i] != c)
+		while (*s == c)
+			s++;
+		if (*s)
 		{
+			while (*s && *s != c)
+				s++;
 			word++;
-			while (s[i] != c && s[i] != '\0')
-			{
-				i++;
-			}
 		}
-		else
-			i++;
 	}
 	return (word);
 }
@@ -54,7 +48,7 @@ char	*ft_string_split(char **split, char const *s, char c, int total_words)
 		if (end == NULL)
 			end = start + ft_strlen(start);
 		len = end - start + 1;
-		split[i] = (char *)malloc(len + 1);
+		split[i] = (char *)malloc(len);
 		if (split[i] == NULL)
 			return (NULL);
 		ft_strlcpy(split[i], start, len);
@@ -70,8 +64,6 @@ char	**ft_split(char const *s, char c)
 	char	**split;
 	int		total_words;
 
-	if (c == '\0')
-		return (s);
 	if (s == NULL)
 		return (NULL);
 	total_words = ft_count_words((char *)s, c);
