@@ -6,11 +6,11 @@
 /*   By: merdal <merdal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 15:20:19 by merdal            #+#    #+#             */
-/*   Updated: 2023/10/30 13:57:00 by merdal           ###   ########.fr       */
+/*   Updated: 2023/11/10 21:01:36 by merdal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

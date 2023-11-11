@@ -6,7 +6,7 @@
 /*   By: merdal <merdal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:47:02 by merdal            #+#    #+#             */
-/*   Updated: 2023/10/31 14:23:48 by merdal           ###   ########.fr       */
+/*   Updated: 2023/11/08 12:37:13 by merdal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,19 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	ft_strlcpy(join, s1, s1_len);
 	ft_strlcat(join, s2, s1_len + s2_len);
+	join[ft_strlen(join)] = '\0';
 	return (join);
 }
+// #include <stdio.h>
+
+// int main()
+// {
+// 	char *s1 = "Hello ";
+// 	char *s2 = "World";
+
+// 	char *res = ft_strjoin(s1, s2);
+
+// 	printf("joined String: %s\n", res);
+
+// 	return 0;
+// }

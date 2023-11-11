@@ -6,11 +6,11 @@
 /*   By: merdal <merdal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:04:37 by merdal            #+#    #+#             */
-/*   Updated: 2023/11/03 17:14:22 by merdal           ###   ########.fr       */
+/*   Updated: 2023/11/10 21:01:31 by merdal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

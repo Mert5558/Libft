@@ -6,7 +6,7 @@
 /*   By: merdal <merdal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 15:58:59 by merdal            #+#    #+#             */
-/*   Updated: 2023/11/04 17:06:37 by merdal           ###   ########.fr       */
+/*   Updated: 2023/11/08 14:45:04 by merdal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,14 @@ int	ft_atoi(const char *str)
 	}
 	return (result * neg);
 }
+// #include <stdio.h>
+
+// int main() 
+// {
+// const char *str = "1234";
+// int result = ft_atoi(str);
+
+// printf("Converted value: %d\n", result);
+
+// return 0;
+// }

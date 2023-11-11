@@ -6,11 +6,14 @@
 #    By: merdal <merdal@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/06 16:55:02 by merdal            #+#    #+#              #
-#    Updated: 2023/10/30 13:16:36 by merdal           ###   ########.fr        #
+#    Updated: 2023/11/08 14:50:01 by merdal           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+CC = cc
+CFLAGS = -Wall -Werror -Wextra
 
 SOURCES = \
 	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c \
@@ -22,22 +25,18 @@ SOURCES = \
 
 OBJECTS = $(SOURCES:.c=.o)
 
-CC = gcc
-CFLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	$(AR) -rcs $@ $^
-
-%.o: %.c 
-	$(CC) -c $<
+	ar rcs $(NAME) $(OBJECTS)
 
 clean: 
 		rm -f $(OBJECTS)
 
 fclean: clean
-		rm -f $(NAME)
+		$(MAKE) clean
+		rm -rf $(NAME)
 
 re: fclean all
 

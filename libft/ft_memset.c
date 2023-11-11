@@ -6,11 +6,11 @@
 /*   By: merdal <merdal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 13:31:09 by merdal            #+#    #+#             */
-/*   Updated: 2023/10/30 12:19:07 by merdal           ###   ########.fr       */
+/*   Updated: 2023/11/10 21:01:41 by merdal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *mem, int value, size_t n)
 {

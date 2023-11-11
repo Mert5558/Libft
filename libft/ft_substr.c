@@ -6,7 +6,7 @@
 /*   By: merdal <merdal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 10:46:46 by merdal            #+#    #+#             */
-/*   Updated: 2023/10/31 13:05:19 by merdal           ###   ########.fr       */
+/*   Updated: 2023/11/11 11:27:01 by merdal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!sub)
 		return (NULL);
 	ft_strlcpy(sub, s + start, len + 1);
+	sub[ft_strlen(sub)] = '\0';
 	return (sub);
 }
+// #include <stdio.h>
+
+// int main()
+// {
+// 	char *s = "Hello World";
+// 	int	start = 6;
+// 	size_t size = 5;
+
+// 	char *res = ft_substr(s, start, size);
+
+// 	printf("new substr: %s\n", res);
+
+// 	return 0;
+// }
